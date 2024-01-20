@@ -12,10 +12,10 @@ import SwiftData
 class Destination {
     var name: String
     var details: String
-    let data: Data
+    var data: Date
     var priority: Int
     
-    init(name: String, details: String, data: Data, priority: Int) {
+    init(name: String = "", details: String = "", data: Date = .now, priority: Int = 2) {
         self.name = name
         self.details = details
         self.data = data
