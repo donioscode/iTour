@@ -10,7 +10,7 @@ import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    
+    @Environment(\.modelContext) var modelContext
     @Query var destinations: [Destination]
     
     var body: some View {
@@ -35,6 +35,10 @@ struct ContentView: View {
         let rome  = Destination(name: "Rome")
         let florence = Destination(name: "Florence")
         let naples  = Destination(name: "Naples")
+        
+        modelContext.insert(rome)
+        modelContext.insert(florence)
+        modelContext.insert(naples)
     }
 }
 
