@@ -12,13 +12,13 @@ import SwiftData
 class Destination {
     var name: String
     var details: String
-    var data: Date
+    var date: Date
     var priority: Int
     
     init(name: String = "", details: String = "", data: Date = .now, priority: Int = 2) {
         self.name = name
         self.details = details
-        self.data = data
+        self.date = data
         self.priority = priority
     }
 }
