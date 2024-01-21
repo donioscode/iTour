@@ -28,6 +28,7 @@ struct ContentView: View {
                 .onDelete(perform: deleteDestinations)
             }
             .navigationTitle("iTour")
+            .navigationDestination(for: Destination.self, destination: EditDestinationView.init)
             .toolbar{
                 Button("Add Samples", action: addSamples)
             }
