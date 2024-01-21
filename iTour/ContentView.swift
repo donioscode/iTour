@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack (path: $path) {
-            DestinationListingView()
+            DestinationListingView(sort: sortOrder )
                 .navigationTitle("iTour")
                 .navigationDestination(for: Destination.self, destination: EditDestinationView.init)
                 .toolbar{
